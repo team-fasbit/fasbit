@@ -1,0 +1,94 @@
+.navbar {
+
+    background-color: #16a085;
+}
+.banner p.sub-title {
+    color: #16a085;
+}
+.feature-banner:after {
+    background-color: #16a085;
+}
+.features-list h5 {
+    color: #16a085;
+}
+footer {
+    background-color: #16a085;
+}
+.chart-title .code {
+    color: #16a085;
+}
+.form-box .form-inner:after {
+    background-color: #16a085;
+}
+.form-box .input-group-text {
+    background-color: #16a085;
+}
+.color-table:after {
+    background-color: #16a085;
+}
+.tab-box .tab-inner:after {
+    background-color: #16a085;
+}
+.news-box .news-inner:after {
+    background-color: #16a085;
+}
+.margin-box .margin-inner:after {
+    background-color: #16a085;
+}
+.register-banner:after {
+    background-color: #16a085;
+}
+.navbar .dropdown-menu {
+    background-color: #16a085;
+}
+.profile-banner:after {
+    background-color: #16a085;
+}
+.profile-box .progress .progress-bar {
+    background-color: #16a085;
+}
+.progress .progress-bar {
+    background-color: #16a085;
+}
+
+
+/*  Custom CSS  */
+
+
+.navbar {
+    /*background-color: #0b7076;*/
+}
+.tab-box .tab-head {
+    background-color: #f4fbf9;
+}
+.order-title1 {
+    background-color: #f4fbf9;
+}
+.order-title {
+    background-color: #f4fbf9;
+}
+.chart-title-head {
+    background-color: #f4fbf9;
+}
+.form-inner1 {
+    background-color: #f4fbf9;
+}
+
+.form-box .form-head {
+    background-color: #e8f6f3;
+}
+form#buy_form {
+    background-color: #f4fbf9;
+    /*height: 370px !important;*/
+}
+div#stop-buy form#buy_form {
+    background-color: #f4fbf9;
+    /*height: 220px !important;*/
+}
+form#sell_form {
+    /*height: 370px !important;*/
+    background-color: #f4fbf9;
+}
+.news-box .news-head {
+ background-color: #f4fbf9; 
+}

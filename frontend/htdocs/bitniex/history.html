@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>Bitniex</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="canonical" href="">
+    <meta name="theme-color" content="#310f72">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+    <!-- Color Switch -->
+    <link rel="stylesheet" href="css/jquery.colorpanel.css">
+    <!-- Default Style CSS -->
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <!-- Color Skin -->
+    <link rel="stylesheet" type="text/css" id="cpswitch" href="css/skins/default.css">
+</head>
+
+<body id="wrapper">
+    <div id="colorPanel" class="colorPanel">
+        <a id="cpToggle" href="#"></a>
+        <ul></ul>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img class="logo" src="img/logo.png" alt=""></a>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarToggler">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="exchange.html"><span class="name">EXCHANGE</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="margin-trading.html"><span class="name">MARGIN TRADING</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lending.html"><span class="name">LENDING</span></a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BALANCES</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="transfer-balances.html">
+                               TRANSFER BALANCES
+                            </a>
+                            <a class="dropdown-item" href="deposits-withdrawls.html">
+                                DEPOSITS & WITHDRAWLS
+                            </a>
+                            <a class="dropdown-item active" href="history.html">
+                                HISTORY
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ORDERS</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="my-open-orders.html">
+                               MY OPEN ORDERS
+                            </a>
+                            <a class="dropdown-item" href="my-trade-history-and-analysis.html">
+                                MY TRADE HISTORY & ANALYSIS
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i></a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="factor-authentication.html">
+                               2 FACTOR-AUTHENTICATION
+                            </a>
+                            <a class="dropdown-item" href="api-keys.html">
+                                API KEYS
+                            </a>
+                            <a class="dropdown-item" href="trading-tier-status.html">
+                                TRADING TIER STATUS
+                            </a>
+                            <a class="dropdown-item" href="login-history.html">
+                                LOGIN HISTORY
+                            </a>
+                            <a class="dropdown-item" href="change-password.html">
+                                CHANGE PASSWORD
+                            </a>
+                            <a class="dropdown-item" href="login.html">
+                                LOGOUT
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i></a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="profile.html">
+                               MY PROFILE
+                            </a>
+                            <a class="dropdown-item" href="linked-accounts.html">
+                               LINKED ACCOUNTS
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="banner row no-margin">
+            <div class="container content">
+                <br>
+                <h1>DEPOSIT & WITHDRAWAL HISTORY</h1>
+                <p class="sub-title text-center">All coins deposited to and withdrawn from your Bitniex account</p>
+                <p class="text-center">Looking for your <a href="">Trade History?</a></p>
+            </div>
+        </div>
+    </header>
+    <div class="page-container">
+        <div class="container-fluid">
+            <div class="row profile-banner">
+                <div class="container content">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <br>
+                            <h5><strong>DEPOSIT HISTORY</strong></h5>
+                            <div class="static-table no-height">
+                                <table class="table table-striped order-data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Status (Confirmations)</th>
+                                            <th>Coin</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Done</td>
+                                            <td>Bitcoin</td>
+                                            <td>0.000000446</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Done</td>
+                                            <td>Bitcoin</td>
+                                            <td>0.000000446</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Done</td>
+                                            <td>Bitcoin</td>
+                                            <td>0.000000446</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Done</td>
+                                            <td>Bitcoin</td>
+                                            <td>0.000000446</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Done</td>
+                                            <td>Bitcoin</td>
+                                            <td>0.000000446</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Done</td>
+                                            <td>Bitcoin</td>
+                                            <td>0.000000446</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Done</td>
+                                            <td>Bitcoin</td>
+                                            <td>0.000000446</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Done</td>
+                                            <td>Bitcoin</td>
+                                            <td>0.000000446</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <br>
+                            <h5><strong>WITHDRAWAL HISTORY</strong></h5>
+                            <div class="static-table no-height">
+                                <table class="table table-striped order-data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Status</th>
+                                            <th>Coin</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Done</td>
+                                            <td>Bitcoin</td>
+                                            <td>0.000000446</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Done</td>
+                                            <td>Bitcoin</td>
+                                            <td>0.000000446</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Done</td>
+                                            <td>Bitcoin</td>
+                                            <td>0.000000446</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Done</td>
+                                            <td>Bitcoin</td>
+                                            <td>0.000000446</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Done</td>
+                                            <td>Bitcoin</td>
+                                            <td>0.000000446</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Done</td>
+                                            <td>Bitcoin</td>
+                                            <td>0.000000446</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Done</td>
+                                            <td>Bitcoin</td>
+                                            <td>0.000000446</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Done</td>
+                                            <td>Bitcoin</td>
+                                            <td>0.000000446</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container content">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12 links">
+                    <h5>ABOUT BITNIEX</h5>
+                    <ul>
+                        <li><a href="">Contact us</a></li>
+                        <li><a href="">Fees</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Terms of use</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 links">
+                    <h5>SUPPORT</h5>
+                    <ul>
+                        <li><a href="">Contact Support</a></li>
+                        <li><a href="">Support Resource</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 links">
+                    <h5>NEWS</h5>
+                    <ul>
+                        <li><a href="">Press Releases</a></li>
+                        <li><a href="">Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 copy">
+                    <img class="footer-logo" src="img/logo.png">
+                    <p><span>Server time: </span>2018-03-15 07:26 <span>UTC</span></p>
+                    <p><span>Users currently online:</span> 11029</p>
+                    <p><span>24hr Volume:</span> 10406 <span>BTC / </span>1273<span> ETH / </span>608<span> XMR / </span>96536568<span> USDT</span></p>
+                    <p>&copy; 2017-2018 Bitniex.com All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js "></script>
+    <script type="text/javascript " language="javascript " src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js ">
+    </script>
+    <script type="text/javascript " language="javascript " src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js ">
+    </script>
+    <!-- Color Switcher -->
+    <script type="text/javascript" src="js/jquery.colorpanel.js"></script>
+    <!-- Custom Scripts -->
+    <script type="text/javascript " src="js/script.js "></script>
+</body>
+<script type="text/javascript ">
+$(document).ready(function() {
+    $('.order-data-table').DataTable();
+});
+</script>
+<script type="text/javascript ">
+jQuery(document).ready(function($) {
+    $(".clickable-row ").click(function() {
+        window.location = $(this).data("href ");
+    });
+});
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $('#colorPanel').ColorPanel({
+        styleSheet: '#cpswitch',
+        animateContainer: '#wrapper',
+        colors: {
+            '#0b7076': 'css/skins/default.css',
+            '#000000': 'css/skins/black.css',
+            '#4b77be': 'css/skins/blue.css',
+            '#c0392c': 'css/skins/red.css',
+            '#16a085': 'css/skins/seagreen.css',
+        }
+    });
+});
+</script>
+
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>Bitniex</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="canonical" href="">
+    <meta name="theme-color" content="#310f72">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+    <!-- Color Switch -->
+    <link rel="stylesheet" href="css/jquery.colorpanel.css">
+    <!-- Default Style CSS -->
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <!-- Color Skin -->
+    <link rel="stylesheet" type="text/css" id="cpswitch" href="css/skins/default.css">
+</head>
+
+<body id="wrapper">
+    <div id="colorPanel" class="colorPanel">
+        <a id="cpToggle" href="#"></a>
+        <ul></ul>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img class="logo" src="img/logo.png" alt=""></a>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarToggler">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="exchange.html"><span class="name">EXCHANGE</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="margin-trading.html"><span class="name">MARGIN TRADING</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="lending.html"><span class="name">LENDING</span></a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Signin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Create Account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="page-container">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-md-9 col-sm-8 col-xs-12">
+                    <div class="row chart-title-head mb-0">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="chart-title">
+                                <h6 class="name">BTC LENDING</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-box">
+                                <div class="form-head">
+                                    <h5 class="tite">OFFER BTC <a href="#" class="help-link">Deposit BTC</a></h5>
+                                    <p>You have : 0.0000007BTC in your lending account</p>
+                                </div>
+                                <div class="form-inner">
+                                    <div class="content row">
+                                        <div class="col-md-3 input-group mb-1 mt-2">
+                                            <input type="text" class="form-control" placeholder="Rate">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 input-group mb-1 mt-2">
+                                            <input type="text" class="form-control" placeholder="Amount">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">BTC</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 input-group mb-1 mt-2">
+                                            <input type="number" class="form-control" placeholder="Duration">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">Days</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 input-group mb-1 mt-2">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                <label class="form-check-label" for="exampleCheck1">Auto renew</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 mb-1 mt-2">
+                                            <a href="#" class="btn btn-light">Offer Loan</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <h5 class="order-title">LOAN OFFERS <span>Total: 6440.00325768 BTC</span></h5>
+                            <div class="order-table color-table">
+                                <table class="table table-striped order-table-fixed">
+                                    <thead>
+                                        <tr>
+                                            <th>Rate</th>
+                                            <th>Amount</th>
+                                            <th>Duration</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>0.0059%</td>
+                                            <td>0.00008552</td>
+                                            <td>2 days</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.0059%</td>
+                                            <td>0.00008552</td>
+                                            <td>2 days</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.0059%</td>
+                                            <td>0.00008552</td>
+                                            <td>2 days</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.0059%</td>
+                                            <td>0.00008552</td>
+                                            <td>2 days</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.0059%</td>
+                                            <td>0.00008552</td>
+                                            <td>2 days</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.0059%</td>
+                                            <td>0.00008552</td>
+                                            <td>2 days</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.0059%</td>
+                                            <td>0.00008552</td>
+                                            <td>2 days</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.0059%</td>
+                                            <td>0.00008552</td>
+                                            <td>2 days</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.0059%</td>
+                                            <td>0.00008552</td>
+                                            <td>2 days</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <h5 class="order-title">LOAN DEMANDS <span>Total: 6440.00325768 BTC</span></h5>
+                            <div class="order-table color-table">
+                                <table class="table table-striped order-table-fixed">
+                                    <thead>
+                                        <tr>
+                                            <th>Rate</th>
+                                            <th>Amount</th>
+                                            <th>Duration</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>0.0059%</td>
+                                            <td>0.00008552</td>
+                                            <td>2 days</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.0059%</td>
+                                            <td>0.00008552</td>
+                                            <td>2 days</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.0059%</td>
+                                            <td>0.00008552</td>
+                                            <td>2 days</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.0059%</td>
+                                            <td>0.00008552</td>
+                                            <td>2 days</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <h5 class="order-title">My OPEN LOAN OFFERS</h5>
+                            <div class="order-table color-table">
+                                <table class="table table-striped order-table-fixed">
+                                    <thead>
+                                        <tr>
+                                            <th>Coin</th>
+                                            <th>Rate</th>
+                                            <th>Amount</th>
+                                            <th>Duration</th>
+                                            <th>Auto-renew</th>
+                                            <th>Date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>BTC</td>
+                                            <td>0.00008552</td>
+                                            <td>0.47023933</td>
+                                            <td>2 days</td>
+                                            <td>ON</td>
+                                            <td>10-5-18</td>
+                                            <td><a class="tbl-link" href="#">Cancel</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>BTC</td>
+                                            <td>0.00008552</td>
+                                            <td>0.47023933</td>
+                                            <td>2 days</td>
+                                            <td>ON</td>
+                                            <td>10-5-18</td>
+                                            <td><a class="tbl-link" href="#">Cancel</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>BTC</td>
+                                            <td>0.00008552</td>
+                                            <td>0.47023933</td>
+                                            <td>2 days</td>
+                                            <td>ON</td>
+                                            <td>10-5-18</td>
+                                            <td><a class="tbl-link" href="#">Cancel</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>BTC</td>
+                                            <td>0.00008552</td>
+                                            <td>0.47023933</td>
+                                            <td>2 days</td>
+                                            <td>ON</td>
+                                            <td>10-5-18</td>
+                                            <td><a class="tbl-link" href="#">Cancel</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>BTC</td>
+                                            <td>0.00008552</td>
+                                            <td>0.47023933</td>
+                                            <td>2 days</td>
+                                            <td>ON</td>
+                                            <td>10-5-18</td>
+                                            <td><a class="tbl-link" href="#">Cancel</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <h5 class="order-title">My ACTIVE LOAN</h5>
+                            <div class="order-table color-table">
+                                <table class="table table-striped order-table-fixed">
+                                    <thead>
+                                        <tr>
+                                            <th>Coin</th>
+                                            <th>Rate</th>
+                                            <th>Amount</th>
+                                            <th>Duration</th>
+                                            <th>Auto-renew</th>
+                                            <th>Type</th>
+                                            <th>Date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>BTC</td>
+                                            <td>0.00008552</td>
+                                            <td>0.47023933</td>
+                                            <td>2 days</td>
+                                            <td>ON</td>
+                                            <td>Type value</td>
+                                            <td>10-5-18</td>
+                                            <td><a class="tbl-link" href="#">Cancel</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="tab-box">
+                                <div class="tab-head">
+                                    <h5 class="tite">MY BALANCES</h5>
+                                </div>
+                                <div class="tab-inner">
+                                    <div class="content">
+                                        <div class="tab-content">
+                                            <table class="table row-border table-hover small-head" cellspacing="0" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Coin</th>
+                                                        <th>Exchange</th>
+                                                        <th>Margin</th>
+                                                        <th>Lending</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="clickable-row" data-href="">
+                                                        <td>BTC</td>
+                                                        <td><span class="">-</span> </td>
+                                                        <td><span class="">-</span></td>
+                                                        <td><span class="">-</span></td>
+                                                    </tr>
+                                                    <tr class="clickable-row" data-href="">
+                                                        <td>BTC</td>
+                                                        <td><span class="">-</span> </td>
+                                                        <td><span class="">-</span></td>
+                                                        <td><span class="">-</span></td>
+                                                    </tr>
+                                                    <tr class="clickable-row" data-href="">
+                                                        <td>BTC</td>
+                                                        <td><span class="">-</span> </td>
+                                                        <td><span class="">-</span></td>
+                                                        <td><span class="">-</span></td>
+                                                    </tr>
+                                                    <tr class="clickable-row" data-href="">
+                                                        <td>BTC</td>
+                                                        <td><span class="">-</span> </td>
+                                                        <td><span class="">-</span></td>
+                                                        <td><span class="">-</span></td>
+                                                    </tr>
+                                                    <tr class="clickable-row" data-href="">
+                                                        <td>BTC</td>
+                                                        <td><span class="">-</span> </td>
+                                                        <td><span class="">-</span></td>
+                                                        <td><span class="">-</span></td>
+                                                    </tr>
+                                                    <tr class="clickable-row" data-href="">
+                                                        <td>BTC</td>
+                                                        <td><span class="">-</span> </td>
+                                                        <td><span class="">-</span></td>
+                                                        <td><span class="">-</span></td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="news-box">
+                                <div class="news-head">
+                                    <h5 class="tite">NOTICES</h5>
+                                </div>
+                                <div class="news-inner">
+                                    <div class="content">
+                                        <div class="news-list">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                                            <p><small>Posted by <strong>Bitniex Team</strong> at 2018-03-03 01:15:04</small></p>
+                                        </div>
+                                        <div class="news-list">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                                            <p><small>Posted by <strong>Bitniex Team</strong> at 2018-03-03 01:15:04</small></p>
+                                        </div>
+                                        <div class="news-list">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                                            <p><small>Posted by <strong>Bitniex Team</strong> at 2018-03-03 01:15:04</small></p>
+                                        </div>
+                                        <div class="news-list">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                                            <p><small>Posted by <strong>Bitniex Team</strong> at 2018-03-03 01:15:04</small></p>
+                                        </div>
+                                        <div class="news-list">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                                            <p><small>Posted by <strong>Bitniex Team</strong> at 2018-03-03 01:15:04</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container content">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12 links">
+                    <h5>ABOUT BITNIEX</h5>
+                    <ul>
+                        <li><a href="">Contact us</a></li>
+                        <li><a href="">Fees</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Terms of use</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 links">
+                    <h5>SUPPORT</h5>
+                    <ul>
+                        <li><a href="">Contact Support</a></li>
+                        <li><a href="">Support Resource</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 links">
+                    <h5>NEWS</h5>
+                    <ul>
+                        <li><a href="">Press Releases</a></li>
+                        <li><a href="">Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 copy">
+                    <img class="footer-logo" src="img/logo.png">
+                    <p><span>Server time: </span>2018-03-15 07:26 <span>UTC</span></p>
+                    <p><span>Users currently online:</span> 11029</p>
+                    <p><span>24hr Volume:</span> 10406 <span>BTC / </span>1273<span> ETH / </span>608<span> XMR / </span>96536568<span> USDT</span></p>
+                    <p>&copy; 2017-2018 Bitniex.com All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js">
+    </script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js">
+    </script>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <!-- Color Switcher -->
+    <script type="text/javascript" src="js/jquery.colorpanel.js"></script
+    <!-- Custom Scripts -->
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.right-data-table').DataTable({
+        // "dom": '<"top"i>rt<"bottom"flp><"clear">'
+        "sDom": "lfrti",
+        "paging": false,
+        "ordering": false,
+        "info": false
+    });
+});
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $('#colorPanel').ColorPanel({
+        styleSheet: '#cpswitch',
+        animateContainer: '#wrapper',
+        colors: {
+            '#0b7076': 'css/skins/default.css',
+            '#000000': 'css/skins/black.css',
+            '#4b77be': 'css/skins/blue.css',
+            '#c0392c': 'css/skins/red.css',
+            '#16a085': 'css/skins/seagreen.css',
+        }
+    });
+});
+</script>
+
+</html>

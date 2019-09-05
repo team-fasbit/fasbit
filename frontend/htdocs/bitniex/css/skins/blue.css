@@ -1,0 +1,132 @@
+.navbar {
+
+    background-color: #4b77be;
+}
+.banner p.sub-title {
+    color: #4b77be;
+}
+.feature-banner:after {
+    background-color: #4b77be;
+}
+.features-list h5 {
+    color: #4b77be;
+}
+footer {
+    background-color: #4b77be;
+}
+.chart-title .code {
+    color: #4b77be;
+}
+.form-box .form-inner:after {
+    background-color: #4b77be;
+}
+.form-box .input-group-text {
+    background-color: #4b77be;
+}
+.color-table:after {
+    background-color: #4b77be;
+}
+.tab-box .tab-inner:after {
+    background-color: #4b77be;
+}
+.news-box .news-inner:after {
+    background-color: #4b77be;
+}
+.margin-box .margin-inner:after {
+    background-color: #4b77be;
+}
+.register-banner:after {
+    background-color: #4b77be;
+}
+.navbar .dropdown-menu {
+    background-color: #4b77be;
+}
+.profile-banner:after {
+    background-color: #4b77be;
+}
+.profile-box .progress .progress-bar {
+    background-color: #4b77be;
+}
+.progress .progress-bar {
+    background-color: #4b77be;
+}.navbar {
+
+    /*background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);*/
+}
+.banner p.sub-title {
+    color: #0b7076;
+}
+.feature-banner:after {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.features-list h5 {
+    color: #0b7076;
+}
+footer {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.chart-title .code {
+    color: #0b7076;
+    margin-bottom: 0rem;
+}
+.form-box .form-inner:after {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.form-box .input-group-text {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.color-table:after {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.tab-box .tab-inner:after {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.news-box .news-inner:after {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.margin-box .margin-inner:after {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.register-banner:after {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.navbar .dropdown-menu {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.profile-banner:after {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.profile-box .progress .progress-bar {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.progress .progress-bar {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+
+
+
+
+/*  Custom CSS  */
+
+
+.navbar {
+    /*background-color: #0b7076;*/
+}
+.tab-box .tab-head {
+    background-color: #e8f6f3;
+}
+.order-title1 {
+    background-color: #e8f6f3;
+}
+.order-title {
+    background-color: #e8f6f3;
+}
+.chart-title-head {
+    background-color: #e8f6f3;
+}
+
+.form-box .form-head {
+    background-color: #f4fbf9;
+}
+
+

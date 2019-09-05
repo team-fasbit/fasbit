@@ -1,0 +1,1844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>Bitniex</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="canonical" href="">
+    <meta name="theme-color" content="#310f72">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+    <!-- Color Switch -->
+    <link rel="stylesheet" href="css/jquery.colorpanel.css">
+    <!-- Default Style CSS -->
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <!-- Color Skin -->
+    <link rel="stylesheet" type="text/css" id="cpswitch" href="css/skins/default.css">
+</head>
+
+<body id="wrapper">
+    <div id="colorPanel" class="colorPanel">
+        <a id="cpToggle" href="#"></a>
+        <ul></ul>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img class="logo" src="img/logo.png" alt=""></a>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarToggler">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="exchange.html"><span class="name">EXCHANGE</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="margin-trading.html"><span class="name">MARGIN TRADING</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lending.html"><span class="name">LENDING</span></a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Signin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Create Account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="page-container">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-md-9 col-sm-8 col-xs-12">
+                    <div class="row chart-title-head">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="chart-title">
+                                <h6 class="name">ETHEREUM MARGIN TRADING</h6>
+                                <p class="code">ETH/BTC</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="chart-hilights">
+                                <div class="row">
+                                    <div class="lastPrice">
+                                        <div class="name">Last Price</div>
+                                        <div class="info">0.00008631</div>
+                                    </div>
+                                    <div class="change">
+                                        <div class="name">24hr Change</div>
+                                        <div class="info">0.62%</div>
+                                    </div>
+                                    <div class="high">
+                                        <div class="name">24hr High</div>
+                                        <div class="info">0.00008754</div>
+                                    </div>
+                                    <div class="low no-border">
+                                        <div class="name">24hr Low</div>
+                                        <div class="info">0.00008001</div>
+                                    </div>
+                                </div>
+                                <div class="row no-border">
+                                    <div class="volume no-border">
+                                        <div class="name">24hr Volume:</div>
+                                        <div class="info"><strong>2070.51209574</strong> <span class="name name1">BTC</span> / <strong>24898590.07236671</strong> <span class="name name2">XRP</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container">
+                                <div id="tradingview_35f2b"></div>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="form-box">
+                                <div class="form-head">
+                                    <h5 class="tite">BUY XRP <a href="#" class="help-link">Deposit BTC</a></h5>
+                                    <p>You have : 0.0000007BTC</p>
+                                    <p>Lowest Ask: : 0.0005673BTC</p>
+                                </div>
+                                <div class="form-inner">
+                                    <div class="content">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Price">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">BTC</span>
+                                            </div>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Amount">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">XRP</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Total">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">BTC</span>
+                                            </div>
+                                        </div>
+                                        <p class="info-link">Fees: <a href="#">0.15/0.25%</a></p>
+                                        <p class="text-right"><a href="#" class="btn btn-light">Buy</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="form-box">
+                                <div class="form-head">
+                                    <h5 class="tite">STOP-LIMIT</h5>
+                                    <p>You have : 0.0000007BTC</p>
+                                    <p>You have : 0.0000007BTC</p>
+                                </div>
+                                <div class="form-inner">
+                                    <div class="content">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Stop">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">BTC</span>
+                                            </div>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Limit">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">BTC</span>
+                                            </div>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Amount">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">XRP</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Total">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">BTC</span>
+                                            </div>
+                                        </div>
+                                        <p class="text-right"><a href="#" class="btn btn-light">Buy</a>
+                                            <a href="#" class="btn btn-light">Sell</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="form-box">
+                                <div class="form-head">
+                                    <h5 class="tite">SELL XRP <a href="#" class="help-link">Deposit XRP</a></h5>
+                                    <p>You have : 0.0000007BTC</p>
+                                    <p>Highest Bid: : 0.0008673BTC</p>
+                                </div>
+                                <div class="form-inner">
+                                    <div class="content">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Price">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">BTC</span>
+                                            </div>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Amount">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">XRP</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Total">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">BTC</span>
+                                            </div>
+                                        </div>
+                                        <p class="info-link">Fees: <a href="#">0.15/0.25%</a></p>
+                                        <p class="text-right">
+                                            <a href="#" class="btn btn-light">Sell</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <h5 class="order-title">SELL ORDERS <span>Total: 26238197.07772236 XRP</span></h5>
+                            <div class="order-table color-table">
+                                <table class="table table-striped order-table-fixed">
+                                    <thead>
+                                        <tr>
+                                            <th>Price</th>
+                                            <th>XRP</th>
+                                            <th>BTC</th>
+                                            <th>Sum(BTC)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <h5 class="order-title">BUY ORDERS <span>Total: 425.67068810 BTC</span></h5>
+                            <div class="order-table color-table">
+                                <table class="table table-striped order-table-fixed">
+                                    <thead>
+                                        <tr>
+                                            <th>Price</th>
+                                            <th>XRP</th>
+                                            <th>BTC</th>
+                                            <th>Sum(BTC)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <h5 class="order-title">My OPEN ORDERS</h5>
+                            <div class="order-table color-table">
+                                <table class="table table-striped order-table-fixed">
+                                    <thead>
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Price(BTC)</th>
+                                            <th>Amount(XRP)</th>
+                                            <th>Total(BTC)</th>
+                                            <th>Rate/Stop</th>
+                                            <th>Date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>BTC</td>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                            <td>10-5-18</td>
+                                            <td><a class="tbl-link" href="#">Withdraw</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>BTC</td>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                            <td>10-5-18</td>
+                                            <td><a class="tbl-link" href="#">Withdraw</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>BTC</td>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                            <td>10-5-18</td>
+                                            <td><a class="tbl-link" href="#">Withdraw</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>BTC</td>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                            <td>10-5-18</td>
+                                            <td><a class="tbl-link" href="#">Withdraw</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>BTC</td>
+                                            <td>0.00008552</td>
+                                            <td>31983.47023933</td>
+                                            <td>2.73522637</td>
+                                            <td>2.73522637</td>
+                                            <td>10-5-18</td>
+                                            <td><a class="tbl-link" href="#">Withdraw</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h5 class="order-title">TRADE HISTORY</h5>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12 text-right">
+                                    <br>
+                                    <ul class="nav nav-tabs btn-tab" id="myTab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="r-btc-tab" data-toggle="tab" href="#mar-trades" role="tab" aria-controls="mar-trades" aria-selected="false">Market Trades</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="my-trades-tab" data-toggle="tab" href="#my-trades" role="tab" aria-controls="r-eth" aria-selected="false">My Trades</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="mar-trades" role="tabpanel" aria-labelledby="mar-trades-tab">
+                                    <div class="order-table color-table">
+                                        <table class="table table-striped order-table-fixed">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Type</th>
+                                                    <th>Price(BTC)</th>
+                                                    <th>Amount(XRP)</th>
+                                                    <th>Total(BTC)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="my-trades" role="tabpanel" aria-labelledby="my-trades-tab">
+                                    <div class="order-table color-table">
+                                        <table class="table table-striped order-table-fixed">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Type</th>
+                                                    <th>Price(BTC)</th>
+                                                    <th>Amount(XRP)</th>
+                                                    <th>Total(BTC)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10-5-18</td>
+                                                    <td>BTC</td>
+                                                    <td>0.00008552</td>
+                                                    <td>31983.47023933</td>
+                                                    <td>2.73522637</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="tab-box">
+                                <div class="tab-head">
+                                    <h5 class="tite">MARKETS</h5>
+                                </div>
+                                <div class="tab-inner">
+                                    <div class="content">
+                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="r-btc-tab" data-toggle="tab" href="#r-btc" role="tab" aria-controls="r-btc" aria-selected="false">BTC</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="r-eth-tab" data-toggle="tab" href="#r-eth" role="tab" aria-controls="r-eth" aria-selected="false">ETH</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="r-xmr-tab" data-toggle="tab" href="#r-xmr" role="tab" aria-controls="r-xmr" aria-selected="false">XMR</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="r-usdt-tab" data-toggle="tab" href="#r-usdt" role="tab" aria-controls="r-usdt" aria-selected="false">USDT</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="r-btc" role="tabpanel" aria-labelledby="r-btc-tab">
+                                                <table class="table row-border right-data-table table-hover" cellspacing="0" width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th width="120">Coin</th>
+                                                            <th>Price</th>
+                                                            <th>Volume</th>
+                                                            <th>Change</th>
+                                                            <th>Name</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="tab-pane fade" id="r-eth" role="tabpanel" aria-labelledby="r-eth-tab">
+                                                <table class="table row-border right-data-table table-hover" cellspacing="0" width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th width="120">Coin</th>
+                                                            <th>Price</th>
+                                                            <th>Volume</th>
+                                                            <th>Change</th>
+                                                            <th>Name</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="tab-pane fade" id="r-xmr" role="tabpanel" aria-labelledby="r-xmr-tab">
+                                                <table class="table row-border right-data-table table-hover" cellspacing="0" width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th width="120">Coin</th>
+                                                            <th>Price</th>
+                                                            <th>Volume</th>
+                                                            <th>Change</th>
+                                                            <th>Name</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="tab-pane fade" id="r-usdt" role="tabpanel" aria-labelledby="r-usdt-tab">
+                                                <table class="table row-border right-data-table table-hover" cellspacing="0" width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th width="120">Coin</th>
+                                                            <th>Price</th>
+                                                            <th>Volume</th>
+                                                            <th>Change</th>
+                                                            <th>Name</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    BCY
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00003818</span> </td>
+                                                            <td><span class="">3.724</span></td>
+                                                            <td><span class="red-color">-3.07</span></td>
+                                                            <td><span class="">BitCrystals</span></td>
+                                                        </tr>
+                                                        <tr class="clickable-row" data-href="">
+                                                            <td>
+                                                                <div class="star-inner">
+                                                                    <input id="star1" type="checkbox" name="time" />
+                                                                    <label for="star1"><i class="fas fa-star"></i></label>
+                                                                    PPC
+                                                                </div>
+                                                            </td>
+                                                            <td><span class="">0.00022895</span> </td>
+                                                            <td><span class="">3.559</span></td>
+                                                            <td><span class="green-color">+0.34</span></td>
+                                                            <td><span class="">PeerCoin</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="margin-box">
+                                <div class="margin-head">
+                                    <h5 class="tite">MARGIN ACCOUNT</h5>
+                                </div>
+                                <div class="margin-inner">
+                                    <div class="content">
+                                        <table class="table row-border" cellspacing="0" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Total Margin Value</td>
+                                                    <td>0 BTC</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unrealized P/L</td>
+                                                    <td><span class="">0.00000000 BTC</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unrealized Lending Fees</td>
+                                                    <td><span class="">0.00000000 BTC</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Net Value</td>
+                                                    <td>0.00000000 BTC</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Borrowed Value</td>
+                                                    <td>0.00000000 BTC</td>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="2">Margins (2.5x Leverage)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <div class="row">
+                                                            <div class="col-md-6 col-sm-6">
+                                                                <p class="mt-1 mb-1">Maintenance <strong>20%</strong></p>
+                                                            </div>
+                                                            <div class="col-md-6 col-sm-6 text-right">
+                                                                <p class="mt-1 mb-1">Initial <strong>40%</strong></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="alert alert-light text-center mb-0" style="padding: 5px;">Current Margin - N/A</div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <hr>
+                                        <div class="col-md-12">
+                                            <h6>POSITIONS</h6>
+                                        </div>
+                                        <table class="table row-border" cellspacing="0" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <th>Coin</th>
+                                                    <th>Position</th>
+                                                    <th>Amount</th>
+                                                    <th>P/L (BTC)</th>
+                                                    <th>Liq. Price</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>BTC</td>
+                                                    <td>10</td>
+                                                    <td>0.03688</td>
+                                                    <td>0.03688</td>
+                                                    <td>0.13688</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>BTC</td>
+                                                    <td>10</td>
+                                                    <td>0.03688</td>
+                                                    <td>0.03688</td>
+                                                    <td>0.13688</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>BTC</td>
+                                                    <td>10</td>
+                                                    <td>0.03688</td>
+                                                    <td>0.03688</td>
+                                                    <td>0.13688</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="news-box">
+                                <div class="news-head">
+                                    <h5 class="tite">NOTICES</h5>
+                                </div>
+                                <div class="news-inner">
+                                    <div class="content">
+                                        <div class="news-list">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                                            <p><small>Posted by <strong>Bitniex Team</strong> at 2018-03-03 01:15:04</small></p>
+                                        </div>
+                                        <div class="news-list">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                                            <p><small>Posted by <strong>Bitniex Team</strong> at 2018-03-03 01:15:04</small></p>
+                                        </div>
+                                        <div class="news-list">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                                            <p><small>Posted by <strong>Bitniex Team</strong> at 2018-03-03 01:15:04</small></p>
+                                        </div>
+                                        <div class="news-list">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                                            <p><small>Posted by <strong>Bitniex Team</strong> at 2018-03-03 01:15:04</small></p>
+                                        </div>
+                                        <div class="news-list">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                                            <p><small>Posted by <strong>Bitniex Team</strong> at 2018-03-03 01:15:04</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container content">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12 links">
+                    <h5>ABOUT BITNIEX</h5>
+                    <ul>
+                        <li><a href="">Contact us</a></li>
+                        <li><a href="">Fees</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Terms of use</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 links">
+                    <h5>SUPPORT</h5>
+                    <ul>
+                        <li><a href="">Contact Support</a></li>
+                        <li><a href="">Support Resource</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 links">
+                    <h5>NEWS</h5>
+                    <ul>
+                        <li><a href="">Press Releases</a></li>
+                        <li><a href="">Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 copy">
+                    <img class="footer-logo" src="img/logo.png">
+                    <p><span>Server time: </span>2018-03-15 07:26 <span>UTC</span></p>
+                    <p><span>Users currently online:</span> 11029</p>
+                    <p><span>24hr Volume:</span> 10406 <span>BTC / </span>1273<span> ETH / </span>608<span> XMR / </span>96536568<span> USDT</span></p>
+                    <p>&copy; 2017-2018 Bitniex.com All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js">
+    </script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js">
+    </script>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <!-- Color Switcher -->
+    <script type="text/javascript" src="js/jquery.colorpanel.js"></script>
+    <!-- Custom Scripts -->
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+<script type="text/javascript">
+new TradingView.widget({
+    "autosize": true,
+    "symbol": "Binance:TRXBTC",
+    "interval": "D",
+    "timezone": "Etc/UTC",
+    "theme": "Light",
+    "style": "1",
+    "locale": "en",
+    "toolbar_bg": "#f1f3f6",
+    "enable_publishing": false,
+    "save_image": false,
+    "hideideas": true,
+    "container_id": "tradingview_35f2b"
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.right-data-table').DataTable({
+        // "dom": '<"top"i>rt<"bottom"flp><"clear">'
+        "sDom": "lfrti",
+        "paging": false,
+        "ordering": false,
+        "info": false
+    });
+});
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $('#colorPanel').ColorPanel({
+        styleSheet: '#cpswitch',
+        animateContainer: '#wrapper',
+        colors: {
+            '#0b7076': 'css/skins/default.css',
+            '#000000': 'css/skins/black.css',
+            '#4b77be': 'css/skins/blue.css',
+            '#c0392c': 'css/skins/red.css',
+            '#16a085': 'css/skins/seagreen.css',
+        }
+    });
+});
+</script>
+
+</html>

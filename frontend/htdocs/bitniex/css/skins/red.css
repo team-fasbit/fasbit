@@ -1,0 +1,148 @@
+.navbar {
+
+    background-color: #c0392c;
+}
+.banner p.sub-title {
+    color: #c0392c;
+}
+.feature-banner:after {
+    background-color: #c0392c;
+}
+.features-list h5 {
+    color: #c0392c;
+}
+footer {
+    background-color: #c0392c;
+}
+.chart-title .code {
+    color: #c0392c;
+}
+.form-box .form-inner:after {
+    background-color: #c0392c;
+}
+.form-box .input-group-text {
+    background-color: #c0392c;
+}
+.color-table:after {
+    background-color: #c0392c;
+}
+.tab-box .tab-inner:after {
+    background-color: #c0392c;
+}
+.news-box .news-inner:after {
+    background-color: #c0392c;
+}
+.margin-box .margin-inner:after {
+    background-color: #c0392c;
+}
+.register-banner:after {
+    background-color: #c0392c;
+}
+.navbar .dropdown-menu {
+    background-color: #c0392c;
+}
+.profile-banner:after {
+    background-color: #c0392c;
+}
+.profile-box .progress .progress-bar {
+    background-color: #c0392c;
+}
+.progress .progress-bar {
+    background-color: #c0392c;
+}.navbar {
+
+    /*background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);*/
+}
+.banner p.sub-title {
+    color: #0b7076;
+}
+.feature-banner:after {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.features-list h5 {
+    color: #0b7076;
+}
+footer {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.chart-title .code {
+    color: #0b7076;
+    margin-bottom: 0rem;
+}
+.form-box .form-inner:after {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.form-box .input-group-text {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.color-table:after {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.tab-box .tab-inner:after {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.news-box .news-inner:after {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.margin-box .margin-inner:after {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.register-banner:after {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.navbar .dropdown-menu {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.profile-banner:after {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.profile-box .progress .progress-bar {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+.progress .progress-bar {
+    background-image: linear-gradient(-134deg, #023063 0%, #021633 100%);
+}
+
+
+
+
+/*  Custom CSS  */
+
+
+.navbar {
+    /*background-color: #0b7076;*/
+}
+.tab-box .tab-head {
+    background-color: #f9ecea;
+}
+.order-title1 {
+    background-color: #f9ecea;
+}
+.order-title {
+    background-color: #f9ecea;
+}
+.chart-title-head {
+    background-color: #f9ecea;
+}
+.form-inner1 {
+    background-color: #f9ecea;
+}
+
+.form-box .form-head {
+    background-color: #fcf6f5;
+}
+form#buy_form {
+    background-color: #f9ecea;
+    /*height: 370px !important;*/
+}
+div#stop-buy form#buy_form {
+    background-color: #f9ecea;
+    /*height: 220px !important;*/
+}
+form#sell_form {
+    /*height: 370px !important;*/
+    background-color: #f9ecea;
+}
+.news-box .news-head {
+ background-color: #f9ecea; 
+}
